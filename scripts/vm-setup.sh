@@ -1,6 +1,8 @@
 #!/bin/bash
 
 cd ~
+rm -rf linuxmatf
+sudo rm -rf nfsroot
 sudo apt update -y
 sudo apt install -y tftpd-hpa
 sudo apt install -y nfs-kernel-server
@@ -13,13 +15,11 @@ sudo apt install -y git
 sudo apt install -y git-lfs
 git clone https://github.com/loucagavricc/linuxmatf.git
 cd linuxmatf
-#sudo cp -rL nfsroot ~
-sudo rm -rf ~/nfsroot
+sudo cp -rL scripts ~/helper-scripts
 sudo unzip nfsroot.zip -d ~
 sudo cp zimage-dtb/zImage /srv/tftp
 sudo cp zimage-dtb/am335x-boneblack.dtb /srv/tftp
 sudo exportfs -r
 sudo /etc/init.d/nfs-kernel-server restart
 sudo /etc/init.d/tftpd-hpa restart
-#cd .. 
-#rm -rf linuxmatf
+rm -rf ~/linuxmatf
