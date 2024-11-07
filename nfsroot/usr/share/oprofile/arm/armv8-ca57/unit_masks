@@ -1,3 +1,0 @@
-# ARMv8 Cortex A57 unit masks
-#
-include:arm/armv8-pmuv3-common
