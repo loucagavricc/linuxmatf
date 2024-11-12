@@ -7,6 +7,8 @@ sudo apt update -y
 sudo apt install -y tftpd-hpa
 sudo apt install -y nfs-kernel-server
 sudo apt install -y picocom
+sudo apt install -y build-essential
+sudo apt install -y libncurses-dev
 nmcli con add type ethernet ifname enxf8dc7a000001 ip4 192.168.0.1/24
 sudo -i <<EOF
 echo "/home/ubuntu/nfsroot 192.168.0.100(rw,no_root_squash,no_subtree_check)" > /etc/exports
