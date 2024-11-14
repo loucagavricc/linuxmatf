@@ -2,7 +2,6 @@
 
 cd ~
 rm -rf linuxmatf
-sudo rm -rf nfsroot
 sudo apt update -y
 sudo apt install -y tftpd-hpa
 sudo apt install -y nfs-kernel-server
